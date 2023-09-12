@@ -128,3 +128,42 @@ console.log(showSchedule("lengua"));
 console.log(showSchedule("geografia"));
 console.log(showSchedule("programación"));
 
+//Ejercicio 5 opc 2
+
+let openSubjects = [
+    {
+        name: "Frontend",
+        day: 'Martes'
+    },
+    {
+        name: "Backend",
+        day: 'Miercoles'
+    },
+    {
+        name: "Metodologias",
+        day: 'Lunes'
+    }
+];
+
+
+function showDay(subject) {
+    let nameOpenSubjects = [];
+    for (i=0; i < openSubjects.length; i++){
+        nameOpenSubjects.push(openSubjects[i]['name']);
+        console.log(nameOpenSubjects);
+    }
+    if (nameOpenSubjects.includes(subject)){
+
+        let subjectIndex = nameOpenSubjects.indexOf(subject);
+        console.log(nameOpenSubjects.indexOf(subject));
+        return openSubjects[subjectIndex]['day'];
+    } 
+    else {
+        return 'Materia no encontrada';
+    }
+}
+
+console.log(showDay('Backend'));
+console.log(showDay('Metodologias'));
+console.log(showDay('Frontend'));
+console.log(showDay('Arquitectura'));
