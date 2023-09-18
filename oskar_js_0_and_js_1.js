@@ -13,6 +13,13 @@ let age = 36;
 let birthdday = 22;
 let birthMonth = 6;
 let birthYear = 1987;
+let dotFive = 0.5;
+let dotTwo = 0.2;
+let zero = 0;
+let one = 1;
+let two = 2;
+let three = 3;
+let four = 4;
 
 let married = true;
 let student = true;
@@ -20,10 +27,6 @@ let hasCar = false;
 let hasBike = false;
 let hasScooter = true;
 let eatBread = true;
-let on = true;
-let off = false;
-let likeMusic = true;
-
 
 // js_1
 
@@ -32,194 +35,112 @@ const returnString = (str) => str;
 
 console.log(returnString("Texto"));
 
-function devolverString(str){
-    return str;
-}
-
-console.log(devolverString(firstName));
-
 //2. Retornar una suma.
-const add = (x,y) => x+y; 
+const add = (x, y) => x + y; 
+
 console.log(add(3, 2));
-console.log(add());
-
-function suma(x, y){
-    let result;
-    result= x + y;
-    return result; 
-}
-
-console.log(suma(age, birthdday));
+console.log(add(one, dotFive));
 
 //3. Retornar una resta.
-function resta(x, y){
-    let result;
-    result= x - y;
-    return result;
-}
+const subtract = (x ,y) => x -y;
 
-console.log(resta(age, birthdday));
+console.log(subtract(3, 2));
+console.log(subtract(dotFive, dotTwo));
 
 //4. Retornar una multiplicación.
-function multiplicar(x, y){
-    let result;
-    result= x * y;
-    return result; 
-}
+const multiply = (x, y) => x * y;
 
-console.log(multiplicar(age, birthdday));
+console.log(multiply(2, 4));
+console.log(multiply(two, three));
 
 //5. Retornar una división.
-function dividir(x, y){
-    let result;
-    result= x / y;
-    return result;
-}
+const split = (x, y) => x / y;
 
-console.log(dividir(age, birthdday));
+console.log(split(4, 2));
+console.log(split(four, 2));
 
 //6. Comparar números.
-function igualdad(x, y){
-    if(x == y){
-        return true;
-    }else{
-        return false;
-    }
-}
+const equality = (x, y) => x == y ? true : false;
 
-console.log(igualdad(3, 3));
-console.log(igualdad(birthMonth, birthYear));
+console.log(equality(2, 3));
+console.log(equality(three, 3));
 
 //7. Comparar la longitud de dos strings.
-function compararLongitur(str1, str2){
-    if(str1.length == str2.length){
-        return true;
-    }else{
-        return false;
-    }    
-}
+const lengthMatch = (str1, str2) => 
+    str1.length == str2.length 
+    ? true
+    : false;
 
-console.log(compararLongitur("hola", "pepe"));
-console.log(compararLongitur(firstName, lastName));
+console.log(lengthMatch("hola", "Pepe"));
+console.log(lengthMatch(firstName, secondName));
 
 //8. Comparar un parámetro I.
 const smallerThanNinety = (num) => num < 90 ? true : false;
     
-console.log(smallerThanNinety());
-
-function menorQueNoventa(num){
-    if(num < 90){
-        return true;
-    }else{
-        return false
-    }
-}
-
-console.log(menorQueNoventa(89));
-console.log(menorQueNoventa(birthMonth));
+console.log(smallerThanNinety(91));
+console.log(smallerThanNinety(age));
 
 //9. Comparar un parámetro II.
-function mayorQueCincuenta(num){
-    if(num > 50){
-        return true;
-    }else{
-        return false
-    }
-}
+const greatherThanFifty = (num) => num > 50 ? true : false;
 
-console.log(mayorQueCincuenta(89));
-console.log(mayorQueCincuenta(birthMonth));
+console.log(greatherThanFifty(40));
+console.log(greatherThanFifty(birthYear));
 
 //10. Retornar el módulo o resto.
-function obtenerResto(x, y){
-    let result;
-    result= x % y;
-    return result;
-}
+const modulus = (x, y) => x % y;
 
-console.log(obtenerResto(age, birthdday));
-console.log(obtenerResto(10, 3));
+console.log(modulus(3, 2));
+console.log(modulus(two, 2));
 
 //11. Comprobar si es par.
 const isEven = (num) => num % 2 == 0 ? true : false;
 
 console.log(isEven(8));
-
-function esPar(num){
-    if(num % 2 == 0){
-        return true;
-    }else{
-        return false;
-    }
-}
-
-console.log(esPar(28));
-console.log(esPar(31));
+console.log(isEven(three));
 
 //12. Comprobar si es impar.
-function esImpar(num){
-    if(num % 2 == 0){
-        return false;
-    }else{
-        return true;
-    }
-}
+const isOdd = (num) => num % 2 == 0 ? false : true;
 
-console.log(esImpar(28));
-console.log("Es impar: " + esImpar(31));
+console.log(isOdd(8));
+console.log(isOdd(three));
 
 //13. Elevar un número al cuadrado.
-function elevarAlCuadrado(num){
-    return num *= num; 
-}
+const squaring = (num) => num * num;
 
-console.log(elevarAlCuadrado(2));
+console.log(squaring(two));
 
 //14. Elevar un número al cubo.
-function elevarAlCubo(num){
-    return num = Math.pow(num, 3); 
-}
+const cube = num => Math.pow(num, 3);
 
-console.log(elevarAlCubo(2));
+console.log(cube(2));
 
 //15. Elevar un número a un exponente.
-function elevar(num, exponent){
-    return num = Math.pow(num, exponent); 
-}
+const raise = (num, exponent) => Math.pow(num, exponent);
 
-console.log(elevar(2, 4));
+console.log(raise(2, 4));
 
 //16. Redondear un número.
-function redondearNumero(num){
-    return num = Math.round(num);
-}
+const roundNumber = num => Math.round(num);
 
-console.log(redondearNumero(2.5));
-console.log(redondearNumero(2.2));
+console.log(roundNumber(2.5));
+console.log(roundNumber(dotFive));
 
 //17. Redondear un número hacia arriba.
-function redondearHaciaArriba(num){
-    if(num - Math.round(num) < 0.5){
-        return num = Math.round(num) + 1;
-    }else{
-        return num = Math.round(num);
-    }
-}
+const roundNumberUp = num =>
+    num - Math.round(num) < 0.5
+    ? num = Math.round(num) + 1
+    : num = Math.round(num);
 
-console.log(redondearHaciaArriba(2.2));
+console.log(roundNumberUp(2.2));
+console.log(roundNumberUp(dotTwo));
 
 //18. Retornar un número aleatorio.
-function numeroRandom(){
-    let randomNumber = Math.random(0, 1);
-    return randomNumber;
-}
+const randomNumber = () => Math.random(0, 1);
 
-console.log(numeroRandom());
-console.log(numeroRandom());
-console.log(numeroRandom());
+console.log(randomNumber());
 
 //19. Comprar si un numero es positivo.
-function esPositivo(num){
+function isPositive(num){
     // La función va a recibir un número entero. Devolvé como resultado una cadena de texto que indica si el número es positivo o negativo: 
     // 🎯 Si el número es positivo, devolver el string "Es positivo".
     // 🎯 Si el número es negativo, devolver el string "Es negativo".
@@ -233,63 +154,48 @@ function esPositivo(num){
     }
 }
 
-console.log(esPositivo(2));
-console.log(esPositivo(-2));
-console.log(esPositivo(0));
+console.log(isPositive(2));
+console.log(isPositive(-2));
+console.log(isPositive(0));
 
 //20. Concatenar strings I.
-function agregarSimboloDeExclamacion(str){
-    return str + '!';
-}
+const addExclamation = (str) => `${str}!`;
 
-console.log(agregarSimboloDeExclamacion(firstName));
-console.log(agregarSimboloDeExclamacion(firstName));
+console.log(addExclamation(firstName));
 
 //21. Concatenar strings II
-function combinarNombres(nombre, apellido){
-    return nombre +' '+ apellido;
-}
+const conbineName = (name, lastName) => name + " " + lastName;
 
-console.log(combinarNombres(firstName, lastName));
+console.log(conbineName(firstName, lastName));
 
 //22. Concatenar strings III.
-function retornarSaludo(nombre){
-    return 'Hola ' + nombre + '!';
-}
+const greet = (name) => `Hola ${name}!`;
 
-console.log(retornarSaludo(firstName));
+console.log(greet(firstName));
 
 //23. Operaciones matemáticas I.
-function areaDelRectangulo(alto, ancho){
-    return alto * ancho;
-}
+const rectangleArea = (width, height) => width * height;
 
-console.log(areaDelRectangulo(2,3));
+console.log(rectangleArea(two, three));
 
 //24. Operaciones matemáticas II.
-function perimetroDelCuadrado(lado){
-    return lado*4; 
-}
+const squarePerimeter = (side) => side * 4;
 
-console.log(perimetroDelCuadrado(8));
+console.log(squarePerimeter(four));
 
 //25. Operaciones matemáticas III.
-function areaDelTriangulo(base, altura){
-    return (base*altura)/2;
-}
+const triangleArea = (base, height) => (base * height)/2;
 
-console.log(areaDelTriangulo(2,3));
+console.log(triangleArea(2,3));
 
 //26. Operaciones matemáticas IV.
-function deEuroAdolar(euro){
-    let cambio = euro * 1.20;
-    return cambio + ' Dolares';
-}
+const euroToDolar = (euros) => 
+    `${euros} euros son: ${euros * 1.2} dolares.`;
 
-console.log(deEuroAdolar(2));
+console.log(euroToDolar(2));
 
 //27. Condicionales.
-function esVocal(letra){
+function isVocal(letra){
     // 🎯 Escribí una función que reciba una letra y, si es una vocal, muestre el mensaje "Es vocal".  
     // 🎯 Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle que no se puede procesar el dato mediante el mensaje "Dato incorrecto". 
     const vocales = ['a', 'e', 'i', 'o', 'u'];
@@ -300,6 +206,6 @@ function esVocal(letra){
     }
 }
 
-console.log(esVocal('a'));
-console.log(esVocal('b'));
-console.log(esVocal('ab'));
+console.log(isVocal('a'));
+console.log(isVocal('b'));
+console.log(isVocal('ab'));
