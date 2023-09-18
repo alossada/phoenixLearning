@@ -195,13 +195,13 @@ const euroToDolar = (euros) =>
 console.log(euroToDolar(2));
 
 //27. Condicionales.
-function isVocal(letra){
+function isVocal(letter){
     // 🎯 Escribí una función que reciba una letra y, si es una vocal, muestre el mensaje "Es vocal".  
     // 🎯 Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle que no se puede procesar el dato mediante el mensaje "Dato incorrecto". 
-    const vocales = ['a', 'e', 'i', 'o', 'u'];
-    if(letra.length > 1){
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    if(letter.length > 1){
         return "Dato incorrecto";
-    }else if(vocales.includes(letra)){
+    }else if(vowels.includes(letter)){
         return "Es vocal";
     }
 }
