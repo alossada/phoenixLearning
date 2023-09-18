@@ -1,27 +1,18 @@
-// js-0
+// js_0
 
-let firstName = "Angelica";
-let lastName = "Losada";
-let nationatility = "Venezuelan";
+let firstName = "Oskar";
+let secondName = `Danilo`
+let lastName = 'Quiroga';
 let countryResidence = "Colombia";
-let birthMonth = "Enero";
-let song = 'baby one more time';
+let zodiacSign = "Geminis";
+let hobby = "Dibujar";
+let sport = 'Ciclismo';
 let signature = 'Javascript'
-let dad = 'wolfgang'
-let mom = 'Angelica'
-let daugthers = 'Azul y bella'
 
 let age = 36;
 let birthdday = 22;
+let birthMonth = 6;
 let birthYear = 1987;
-let heightMt = 159;
-let weightKg = 59;
-let children = 2;
-let brothers = 2;
-let sisters = 1;
-let food = 3;
-let zipcode = 111166;
-
 
 let married = true;
 let student = true;
@@ -31,13 +22,16 @@ let hasScooter = true;
 let eatBread = true;
 let on = true;
 let off = false;
-let meBe = true;
 let likeMusic = true;
 
 
-// js-1
+// js_1
 
 //1. Retornar un string.
+const returnString = (str) => str;
+
+console.log(returnString("Texto"));
+
 function devolverString(str){
     return str;
 }
@@ -45,6 +39,10 @@ function devolverString(str){
 console.log(devolverString(firstName));
 
 //2. Retornar una suma.
+const add = (x,y) => x+y; 
+console.log(add(3, 2));
+console.log(add());
+
 function suma(x, y){
     let result;
     result= x + y;
@@ -105,6 +103,10 @@ console.log(compararLongitur("hola", "pepe"));
 console.log(compararLongitur(firstName, lastName));
 
 //8. Comparar un parámetro I.
+const smallerThanNinety = (num) => num < 90 ? true : false;
+    
+console.log(smallerThanNinety());
+
 function menorQueNoventa(num){
     if(num < 90){
         return true;
@@ -114,7 +116,7 @@ function menorQueNoventa(num){
 }
 
 console.log(menorQueNoventa(89));
-console.log(menorQueNoventa(zipcode));
+console.log(menorQueNoventa(birthMonth));
 
 //9. Comparar un parámetro II.
 function mayorQueCincuenta(num){
@@ -126,7 +128,7 @@ function mayorQueCincuenta(num){
 }
 
 console.log(mayorQueCincuenta(89));
-console.log(mayorQueCincuenta(children));
+console.log(mayorQueCincuenta(birthMonth));
 
 //10. Retornar el módulo o resto.
 function obtenerResto(x, y){
@@ -139,6 +141,10 @@ console.log(obtenerResto(age, birthdday));
 console.log(obtenerResto(10, 3));
 
 //11. Comprobar si es par.
+const isEven = (num) => num % 2 == 0 ? true : false;
+
+console.log(isEven(8));
+
 function esPar(num){
     if(num % 2 == 0){
         return true;
@@ -237,7 +243,7 @@ function agregarSimboloDeExclamacion(str){
 }
 
 console.log(agregarSimboloDeExclamacion(firstName));
-console.log(agregarSimboloDeExclamacion(song));
+console.log(agregarSimboloDeExclamacion(firstName));
 
 //21. Concatenar strings II
 function combinarNombres(nombre, apellido){
